@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<sr>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user = [5];
+        var ask;
+        // var target = 2;
+        for(i=0; i<5; i++){
+            user[i]= prompt('Enter 5 different Number' + '');
+          document.write(user[i]);
+        }
+            ask= prompt('Enter a Number to search' + '');
+        
+        for(i=0; i<5; i++){
+           if(ask == user[i]){
+            document.write(`the element is found at position ${i+1}`);
+            break;
+           }
+        }
+        if(i == 5){
+            document.write(`not found`);
+        }
+        
+    </script>
+</body>
+</html>

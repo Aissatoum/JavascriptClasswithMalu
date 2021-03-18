@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declering a property</title>
+</head>
+<body>
+    <script>
+        var cars = {
+          make:"Nissan",
+          model:"Infinity",
+          year:2021
+        }
+        var student = {
+            firstname: "Elizabeth",
+            lastname: "Smith",
+            fullname: function(){
+                return this.firstname + this.lastname;
+            }
+        }
+        // document.write(student.fullname());
+        cars.year =2020;
+        cars["make"] = "BMW";
+        // var object = new Cars
+        document.write(cars.make + ' ' + cars.model + ' ' + cars.year + '<br>');
+        document.write(student.fullname);
+    </script>
+</body>
+</html>

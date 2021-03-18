@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function luckySeven(arr){
+         if(arr.length < 3){
+            document.write("not possible"); 
+         }
+         for(i=2; i<arr.length; i++){
+             var sum =arr[i] + arr[i-2] + arr[i-3];
+             if(sum == 7){
+                //  return true;
+                 document.write(sum);
+             }else{
+            return false;
+         }
+         }
+         
+        }
+        luckySeven([2,1,5,1,0]);
+    </script>
+</body>
+</html>

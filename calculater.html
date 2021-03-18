@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+body{
+	font-family: 'Open Sans',sans-serif;
+}
+#container{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 40px auto;
+}
+ #calculator{
+	width: 320px;
+	height: 520px;
+	background-color:darkgrey;
+	margin: 0 auto;
+	top: 20px;
+	position: relative;
+    left: 300px;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input{
+    width: 310px;
+    height:60px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background-color: #4d4d4d;
+    border: 1px solid darkgrey;
+}
+.operator, .number, .empty{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+.number, .empty{
+	background-color: #eaedef;
+}
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+    </style>
+</head>
+<body>
+	
+    <div id="container">
+        <div id="calculator">
+    <div id="keyboard">
+        <input type="text" id="number"><br>
+        <button class="operator" id="clear">C</button>
+        <button class="operator" id="backspace">CE</button>
+        <button class="operator" id="%" onclick="modulo()">%</button>
+        <button class="operator" id="multi" onclick="callequal()">=</button>
+        <button class="operator" id="divi" onclick="divide()">&#247;</button>
+        <button class="operator" id="subst" onclick="subtract()">-</button>
+        <button class="operator" id="addi" onclick="add()">+</button>
+        <button class="number" id="cross" onclick="multiply()">&times;</button>
+        <button class="number" id="dot" onclick="calldot()">.</button>
+        <button class="number" id="nine" onclick="call9()">9</button>
+        <button class="number" id="eight" onclick="call8()">8</button>
+        <button class="number" id="seven" onclick="call7()">7</button>
+        <button class="number" id="six" onclick="call6()">6</button>
+        <button class="number" id="five" onclick="call5()">5</button>
+        <button class="number" id="four" onclick="call4()">4</button>
+        <button class="number" id="three" onclick="call3()">3</button>
+        <button class="number" id="zero" onclick="call0()">0</button>
+        <button class="operator" id="one" onclick="call1()">1</button>
+        <button class="operator" id="two" onclick="call2()">2</button>
+    </div>
+    </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>

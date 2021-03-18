@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="mult()">click</button>
+    <script>
+        function mult(){
+        let user = [5];
+        let z = 0;
+        for(i=0; i<5; i++){
+            user[i]= prompt("enter 5 number");
+            document.write(`${user[i]},</br>`);
+        }
+    
+        //to do remove the duplicate number still work on it.
+        for(i=0;i<5; i++){
+            for(j=i+1; j<5; j++){
+        //         for(w=j-1; w<=j; w++){
+        //         if(user[i] == user[w]){
+        //             document.write(`${user[i]}`);
+        //         }
+        //     }
+            if(user[i] == user[j]){
+            document.write('there is repeated that is why it is multiset <br>');
+            document.write('Converting a multiset to a set <br>');
+            for(m=0; m<5; m++){
+                for(f=m+1; f<5; f++){
+                    if(user[m] == user[f]){
+                        for(j=f; j<5; j++){
+                                user[j] = user[j+1];
+                        }
+                        z++;
+                    }
+                }
+            }
+            for(i=0; i<5-z; i++){
+            document.write(user[i]);
+            }
+            return;
+                       
+            }
+        }
+    }
+}
+        if(i==5){
+            document.write(` is set`);
+        }
+    
+    </script>
+</body>
+</html>

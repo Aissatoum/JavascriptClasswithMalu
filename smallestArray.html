@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var enter = [5];
+        var least=0;
+        for(i=0; i<5; i++){
+            enter[i]=prompt('Enter 5 different number' + '');
+            
+        }
+        // for(i=0; i<5; i++){
+        //     document.write(enter[i]);
+        // }
+        least= enter[0];
+        for(i=0; i<5; i++){
+           if(least < enter[i]){ // change the sign to less than to have the least number
+               least= enter[i];
+           }
+        }
+        document.write(least);
+        
+
+    </script>
+</body>
+</html>
